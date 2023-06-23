@@ -1,0 +1,8 @@
+FROM nasqueron/nginx-php-fpm
+LABEL maintainer="@marybrachini"
+RUN apt update
+
+WORKDIR /var/www/html
+COPY app/* ./
+
+EXPOSE 80
